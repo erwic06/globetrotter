@@ -16,7 +16,14 @@ Notes:
 - The gallery uses `figure`/`figcaption` so each caption is semantically bound to its image as one unit, not a loose paragraph sitting near an `<img>`.
 
 ## Milestone 2: CSS Styling
-_Add entries after applying styles._
+- One color/font choice and why it serves the destination: Headings use Poppins and the palette centers on ocean blue + lagoon teal over a warm sand background. The blue/teal reads as Pacific water while the sand keeps it from feeling cold or clinical, matching the "fresh, warm, easygoing" intent.
+- One Claude suggestion I rejected and why: _TODO: e.g., rejected a pure-white background in favor of warm sand so the page feels beachy rather than sterile._
+- One style that didn't look right at first and what I changed: _TODO: e.g., hero text was hard to read over bright photos, so a bottom-up dark gradient was added behind it._
+
+Notes:
+- Palette is stored as CSS custom properties in `:root` so colors live in one place and can be tuned globally via `var(--name)`.
+- Hero readability handled with a `linear-gradient` overlay rather than darkening the image itself, keeping the photo visible.
+- Layout deliberately left block-level here; rows/columns are introduced with Flexbox in Milestone 3.
 
 ## Milestone 3: Flexbox Layout
 _Add entries after implementing Flexbox._
