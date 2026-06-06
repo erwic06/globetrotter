@@ -56,3 +56,23 @@ Gonna be going for lots of blue and green and gonna attach lots of beautiful bea
 **Spacing/sizing notes**
 - Use the `gap` property for spacing between flex items (cleaner than margins).
 - Cards should grow to fill the row evenly (`flex: 1` with a sensible `min-width` so they wrap instead of getting too skinny).
+
+---
+
+## Breakpoints Plan (Milestone 4)
+
+**Three device sizes**
+- Mobile: up to 600px (phones).
+- Tablet: 601px–1024px.
+- Desktop: above 1024px (base styles already target this).
+
+The base layout is written for desktop and the cards already wrap via `flex-wrap`, so the media queries override downward (`max-width`) to adjust the things that don't fix themselves.
+
+**What changes at each breakpoint**
+- Header/nav: at <=600px the logo and links stack and center, and links go full-width-ish so they're easy to tap.
+- Hero: shorter height and a smaller `h1` on phones so it doesn't dominate the whole screen.
+- Highlight / attraction / gallery cards: they wrap naturally; at <=600px force a single column so cards aren't awkwardly narrow.
+- Food entries: this is the section that should feel genuinely different on mobile. On desktop it's image-left / text-right; on phones the image stacks on top of the text (switch `flex-direction` to column) so each entry reads top-to-bottom like a normal mobile card.
+
+**Meaningfully different on mobile (not just smaller)**
+- The food guide's image+text row becomes a stacked card. A 40%-wide image next to text is unreadable on a narrow phone, so the relationship between image and text changes, not just the scale.
