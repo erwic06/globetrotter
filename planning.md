@@ -32,3 +32,27 @@ Gonna be going for lots of blue and green and gonna attach lots of beautiful bea
 
 **One visual choice tied to the destination's identity**
 - A full-width hero photo with text laid over a soft dark gradient, echoing standing on the sand looking out at the water — the first thing you'd actually see in Hawaii.
+
+---
+
+## Flexbox Layout Plan (Milestone 3)
+
+**Header / navigation**
+- Logo on the left, nav links in a row on the right, on the same line. Use `justify-content: space-between` to push them apart and `align-items: center` to vertically center.
+- Desktop: links sit in one horizontal row. Smaller screens: allow them to wrap; full single-column stacking is handled in Milestone 4.
+
+**Home — highlight cards**
+- Three teaser cards arranged side by side in a row at desktop width, equal width, even gaps. `flex-wrap: wrap` so they drop to fewer-per-row as space shrinks.
+
+**Top Attractions**
+- Three attraction cards in a row at desktop, equal width, consistent gap. Wrap to 2-up / 1-up as the screen narrows.
+
+**Food Guide**
+- Each entry is a horizontal row: image on the left, text block on the right (image ~40% width, text fills the rest). On narrow screens the image stacks above the text (Milestone 4).
+
+**Photo Gallery**
+- A flexible grid of figures, 3 per row at desktop, wrapping naturally. Equal-ish sizing with a consistent gap so it reads as a tidy grid.
+
+**Spacing/sizing notes**
+- Use the `gap` property for spacing between flex items (cleaner than margins).
+- Cards should grow to fill the row evenly (`flex: 1` with a sensible `min-width` so they wrap instead of getting too skinny).
