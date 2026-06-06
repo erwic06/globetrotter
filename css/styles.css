@@ -362,3 +362,72 @@ main {
   flex: 1 1 280px;
   margin-bottom: 0;
 }
+
+/* ================================================================== *
+ * MILESTONE 4: RESPONSIVE / MEDIA QUERIES
+ * A media query applies its rules only when the condition is true. These use
+ * max-width (override downward from the desktop base). Because the cards
+ * already wrap via flex, the queries mostly handle the things that don't fix
+ * themselves: the nav, the hero size, and the food card's image/text relationship.
+ * ================================================================== */
+
+/* --- Tablet and below (<= 1024px): tighten the hero a little --- */
+@media (max-width: 1024px) {
+  .hero-image {
+    height: 50vh;
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* --- Phones (<= 600px): the big layout shifts --- */
+@media (max-width: 600px) {
+  /* Stack the logo above centered nav links so they're tap-friendly. */
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Full width gives flex-wrap a boundary to wrap the links against; without
+     this the list shrinks to its content and overflows the screen. */
+  .nav-list {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hero shrinks so content below is reachable without a long scroll. */
+  .hero-image {
+    height: 40vh;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Force a single column for all card groups by letting each card take the
+     full row width (flex-basis 100%). */
+  .highlight-card,
+  .attraction-card,
+  .gallery-item {
+    flex-basis: 100%;
+  }
+
+  /* The meaningful mobile change: food entries go from side-by-side to a
+     stacked card (image on top, text below). */
+  .food-card {
+    flex-direction: column;
+  }
+
+  .food-image {
+    flex-basis: auto;   /* no longer a 40% column... */
+    width: 100%;        /* ...now full-width on top */
+    height: 200px;
+  }
+
+  /* Smaller side padding so content isn't cramped on a narrow screen. */
+  main {
+    padding: 0 1rem;
+  }
+}

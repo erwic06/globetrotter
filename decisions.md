@@ -35,7 +35,14 @@ Notes:
 - Header uses `justify-content: space-between` + `align-items: center` to put the logo and nav on one line.
 
 ## Milestone 4: Responsive Design
-_Add entries after implementing media queries._
+- Breakpoints used and why: `max-width: 1024px` (tablet-and-down, light hero tweaks) and `max-width: 600px` (phones, the real layout shifts). Desktop is the unqualified base since the Flexbox cards already wrap on their own; the queries only override what doesn't fix itself.
+- One section where mobile needed to feel genuinely different: The food guide switches each entry from image-left/text-right to a stacked card (`flex-direction: column`, image full-width on top). A 40%-wide image next to text is unreadable on a phone, so the image/text relationship changes rather than just shrinking.
+- One Claude suggestion accepted/rejected and why: Kept `max-width` (desktop-first) queries instead of rewriting to mobile-first, because the base styles were already built for desktop and the cards wrap responsively; a full mobile-first rewrite would have been churn for no visible gain.
+
+Notes / debugging:
+- Hit a bug where the nav didn't wrap on phones and stretched the page. Cause: when the header became a column, the nav list shrank to its content width, so `flex-wrap` had no boundary to wrap against. Fix: `width: 100%` on `.nav-list` in the mobile query.
+- Verified `document.documentElement.scrollWidth === window.innerWidth` (no horizontal overflow) at 500px, 768px, and 1200px across all four pages.
 
 ## Stretch Features
-_Add entries if you implement any stretch features._
+- Custom Styling: Added Google Fonts (Poppins + Lato) and used CSS properties beyond the basics: custom properties (`--ocean`, etc. in `:root`), `object-fit: cover`, and a `linear-gradient` overlay on the hero.
+- (Not yet done: embedded map/video, CSS Grid, dropdown nav, newsletter form, deployment.)
