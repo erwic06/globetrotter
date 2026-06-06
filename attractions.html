@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Globetrotter | Top Attractions</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-logo" href="index.html">Globetrotter</a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html" aria-current="page">Top Attractions</a></li>
+        <li><a href="food-guide.html">Food Guide</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Top Attractions</h1>
+      <p>Three stops that show off Hawaii's range &mdash; reef, rainforest, and ridgeline.</p>
+    </section>
+
+    <!-- Each attraction is an <article>: a standalone unit of content with the same
+         shape (image, title, description). Keeping the inner structure identical is
+         what lets one CSS rule style all three the same way. -->
+    <section class="attraction-list">
+      <article class="attraction-card">
+        <img class="attraction-image" src="images/hanauma-bay.jpg" alt="Snorkelers in the clear water of Hanauma Bay" />
+        <h2 class="attraction-name">Hanauma Bay</h2>
+        <p class="attraction-description">
+          A protected marine reserve curved into an old volcanic crater. The shallow,
+          calm water makes it the most beginner-friendly snorkeling on Oahu &mdash; expect
+          parrotfish, sea turtles, and a short conservation video before you can enter.
+        </p>
+      </article>
+
+      <article class="attraction-card">
+        <img class="attraction-image" src="images/waimea-valley.jpg" alt="A waterfall at the end of the Waimea Valley trail" />
+        <h2 class="attraction-name">Waimea Valley</h2>
+        <p class="attraction-description">
+          A gentle, mostly paved walk through botanical gardens that ends at a
+          60-foot waterfall you can swim under. It's a quieter, greener counterpoint
+          to the beaches, and a good rainy-day backup on the North Shore.
+        </p>
+      </article>
+
+      <article class="attraction-card">
+        <img class="attraction-image" src="images/diamond-head.jpg" alt="The view from the summit of Diamond Head crater" />
+        <h2 class="attraction-name">Diamond Head</h2>
+        <p class="attraction-description">
+          The crater hike everyone photographs. It's a steep but short climb with
+          stairs and a tunnel near the top, rewarding you with a panorama over Waikiki
+          and the south shore. Go at sunrise to beat the heat and the crowds.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built as a personal travel guide. Photos are placeholders for now.</p>
+  </footer>
+</body>
+</html>

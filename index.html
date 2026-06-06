@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Tells mobile browsers to use the device width instead of pretending to be a
+       980px desktop. Required for the media queries in Milestone 4 to take effect. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Globetrotter | Hawaii</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- This header + nav block is identical on every page. In plain HTML there's no
+       "include" mechanism, so it's copied into each file. If one nav link changes,
+       it has to change in all four pages. -->
+  <header class="site-header">
+    <a class="site-logo" href="index.html">Globetrotter</a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="attractions.html">Top Attractions</a></li>
+        <li><a href="food-guide.html">Food Guide</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- <main> marks the one block of content unique to this page. Screen readers can
+       jump straight to it, skipping the repeated header/nav. -->
+  <main>
+    <!-- The hero: the big first impression. The image lives in CSS as a background
+         later; for now it's a real <img> so it shows up before styling exists. -->
+    <section class="hero">
+      <img class="hero-image" src="images/hero-beach.jpg" alt="A turquoise Hawaiian beach with palm trees" />
+      <div class="hero-text">
+        <h1>Aloha, and welcome to Hawaii</h1>
+        <p class="hero-tagline">A local-leaning guide to the beaches, hikes, and (especially) the seafood.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>What this guide is for</h2>
+      <p>
+        Most Hawaii guides cover the same ten stops. This one is the trip I'd actually
+        take you on: the attractions worth your time, a food guide built around fresh
+        seafood, and a gallery to set the mood before you go. Whether it's your first
+        visit or your fiftieth, the goal is simple &mdash; eat well, swim often, and
+        leave the place better than you found it.
+      </p>
+    </section>
+
+    <!-- A short three-up summary that links out to the subpages. Each block is an
+         <article> because it's a self-contained teaser that could stand on its own. -->
+    <section class="highlights">
+      <h2>Start here</h2>
+      <div class="highlight-grid">
+        <article class="highlight-card">
+          <h3>Top Attractions</h3>
+          <p>Snorkel coves, valley waterfalls, and the island's most famous crater hike.</p>
+          <a href="attractions.html">See the attractions &rarr;</a>
+        </article>
+        <article class="highlight-card">
+          <h3>Food Guide</h3>
+          <p>Where to find shrimp trucks, poke counters, and harbor-side fish markets.</p>
+          <a href="food-guide.html">Find the seafood &rarr;</a>
+        </article>
+        <article class="highlight-card">
+          <h3>Photo Gallery</h3>
+          <p>Sunsets, surf, sea turtles, and waterfalls to get you dreaming.</p>
+          <a href="gallery.html">Browse the gallery &rarr;</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built as a personal travel guide. Photos are placeholders for now.</p>
+  </footer>
+</body>
+</html>

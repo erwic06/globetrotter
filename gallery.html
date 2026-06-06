@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Globetrotter | Photo Gallery</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-logo" href="index.html">Globetrotter</a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Top Attractions</a></li>
+        <li><a href="food-guide.html">Food Guide</a></li>
+        <li><a href="gallery.html" aria-current="page">Photo Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Photo Gallery</h1>
+      <p>A few frames to get you in the mood for the islands.</p>
+    </section>
+
+    <!-- Each photo is a <figure> and its caption is a <figcaption>. This pairs the
+         caption to the image as a single unit in the document outline, instead of
+         leaving a loose <p> that just happens to sit near an <img>. The alt text
+         describes the image for screen readers; the caption is the visible label. -->
+    <section class="gallery">
+      <figure class="gallery-item">
+        <img src="images/gallery-sunset.jpg" alt="The sun setting over the Pacific Ocean" />
+        <figcaption>Golden hour on the west shore.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/gallery-surf.jpg" alt="A surfer riding a wave" />
+        <figcaption>North Shore swell, winter season.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/gallery-turtle.jpg" alt="A green sea turtle resting near the shore" />
+        <figcaption>A honu (green sea turtle) basking on the sand.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/gallery-waterfall.jpg" alt="A waterfall surrounded by tropical greenery" />
+        <figcaption>One of many roadside waterfalls.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/gallery-volcano.jpg" alt="A volcanic landscape with hardened lava fields" />
+        <figcaption>The volcanic terrain of the Big Island.</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="images/gallery-luau.jpg" alt="A traditional Hawaiian luau gathering at dusk" />
+        <figcaption>An evening luau, fire and all.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built as a personal travel guide. Photos are placeholders for now.</p>
+  </footer>
+</body>
+</html>

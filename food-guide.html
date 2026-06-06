@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Globetrotter | Food Guide</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-logo" href="index.html">Globetrotter</a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Top Attractions</a></li>
+        <li><a href="food-guide.html" aria-current="page">Food Guide</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Seafood Guide</h1>
+      <p>If you only learn one thing here: eat the fish. Three spots, three kinds of traveler.</p>
+    </section>
+
+    <section class="food-list">
+      <!-- Each entry is an <article>. The address uses the <address> element, which
+           is the semantically correct tag for contact/location info. The "more info"
+           link opens in a new tab (target="_blank"); rel="noopener" is a small
+           security habit that stops the new page from controlling this one. -->
+      <article class="food-card">
+        <img class="food-image" src="images/shrimp-truck.jpg" alt="Garlic shrimp plate from a North Shore food truck" />
+        <div class="food-body">
+          <h2 class="food-name">Giovanni's Shrimp Truck</h2>
+          <p class="food-audience"><strong>Best for:</strong> backpackers and road-trippers</p>
+          <address class="food-address">66-472 Kamehameha Hwy, Haleiwa, HI</address>
+          <p class="food-description">
+            A graffiti-covered truck slinging garlic shrimp plates on the North Shore.
+            Cash-friendly, huge portions, picnic-table seating &mdash; the no-fuss,
+            high-reward stop on a circle-island drive.
+          </p>
+          <a class="food-link" href="https://www.giovannisshrimptruck.com/" target="_blank" rel="noopener">
+            View menu &amp; hours &rarr;
+          </a>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <img class="food-image" src="images/poke-bowl.jpg" alt="A fresh ahi poke bowl over rice" />
+        <div class="food-body">
+          <h2 class="food-name">Ono Seafood</h2>
+          <p class="food-audience"><strong>Best for:</strong> solo travelers and quick lunches</p>
+          <address class="food-address">747 Kapahulu Ave, Honolulu, HI</address>
+          <p class="food-description">
+            A tiny counter that many locals call the best poke in Honolulu. Order the
+            shoyu ahi, grab a seat outside, and don't be surprised by a line &mdash; it
+            moves fast and it's worth it.
+          </p>
+          <a class="food-link" href="https://www.yelp.com/biz/ono-seafood-honolulu" target="_blank" rel="noopener">
+            See reviews &rarr;
+          </a>
+        </div>
+      </article>
+
+      <article class="food-card">
+        <img class="food-image" src="images/fish-market.jpg" alt="Fresh fish on ice at a harbor-side market" />
+        <div class="food-body">
+          <h2 class="food-name">Nico's Pier 38</h2>
+          <p class="food-audience"><strong>Best for:</strong> families and sit-down dinners</p>
+          <address class="food-address">1129 N Nimitz Hwy, Honolulu, HI</address>
+          <p class="food-description">
+            A harbor-side restaurant and fish market right where the boats come in.
+            Roomy seating, a kids-friendly menu, and fish that was swimming that morning.
+            Come for the furikake-crusted ahi.
+          </p>
+          <a class="food-link" href="https://nicospier38.com/" target="_blank" rel="noopener">
+            Visit website &rarr;
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built as a personal travel guide. Photos are placeholders for now.</p>
+  </footer>
+</body>
+</html>
