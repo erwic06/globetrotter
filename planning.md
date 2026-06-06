@@ -13,3 +13,22 @@ That I love seafood.
 What's one design decision — color, layout, or tone — that reflects your destination's identity?
 
 Gonna be going for lots of blue and green and gonna attach lots of beautiful beach scenery. Classic Hawaii travel guide.
+
+---
+
+## Design Intent (Milestone 2)
+
+**Color palette + three feeling words**
+- Ocean blue (`#1b6f8c`) for the deep Pacific, used for the header, links, and accents.
+- Lagoon teal (`#2aa9a0`) as a brighter secondary for hovers and highlights.
+- Palm green (`#3c7a4f`) as a supporting natural tone.
+- Sand (`#f6efe2`) as the page background and warm sun (`#f4a259`) as a small warm accent so it doesn't read as cold.
+- Three feeling words: **fresh, warm, easygoing.**
+
+**Typography (heading font / body font)**
+- Headings: **Poppins** (Google Font) — rounded, friendly, a little modern; reads as approachable rather than corporate.
+- Body: **Lato** (Google Font) — a clean, highly readable sans-serif that stays calm next to the louder headings.
+- Reasoning: a relaxed beach guide shouldn't feel like a serious newspaper, but body text still needs to be effortless to read on a phone.
+
+**One visual choice tied to the destination's identity**
+- A full-width hero photo with text laid over a soft dark gradient, echoing standing on the sand looking out at the water — the first thing you'd actually see in Hawaii.
