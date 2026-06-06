@@ -26,7 +26,13 @@ Notes:
 - Layout deliberately left block-level here; rows/columns are introduced with Flexbox in Milestone 3.
 
 ## Milestone 3: Flexbox Layout
-_Add entries after implementing Flexbox._
+- One Flexbox property choice and why: Cards use `flex: 1 1 <basis>` (e.g. `1 1 280px`) plus `flex-wrap: wrap` on the container. This lets cards grow to fill the row evenly but wrap to a new row once they'd get narrower than the basis, which gives responsive behavior for free before media queries.
+- One place Claude's layout didn't match the plan and what I changed: The food entry image (`flex: 0 0 40%` with `height: auto`) made the row as tall as the image, leaving whitespace beside short text. Changed it to a fixed `height: 300px` with `object-fit: cover` so the image crops to a tidy row height instead.
+- One layout challenge that required adjusting structure and why: The food entries needed image-beside-text, so each entry's text is wrapped in a `.food-body` div. Making the `.food-card` a flex row lays out the image and that single text container side by side; without the wrapper the heading/address/description would each become separate flex items.
+
+Notes:
+- Spacing between flex items uses the `gap` property instead of per-item margins (cleaner, no leftover trailing margin).
+- Header uses `justify-content: space-between` + `align-items: center` to put the logo and nav on one line.
 
 ## Milestone 4: Responsive Design
 _Add entries after implementing media queries._

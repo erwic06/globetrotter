@@ -271,3 +271,94 @@ main {
 .site-footer p {
   margin: 0;
 }
+
+/* ================================================================== *
+ * MILESTONE 3: FLEXBOX LAYOUT
+ * Flexbox turns a container into a flex context; its direct children become
+ * flex items that line up along a main axis (row by default). This is where
+ * the stacked Milestone 2 elements become rows and grids.
+ * ================================================================== */
+
+/* --- Header: logo left, nav right, on one line --- */
+.site-header {
+  display: flex;
+  justify-content: space-between;  /* max space between logo and nav */
+  align-items: center;             /* vertically center them */
+  flex-wrap: wrap;                 /* allow nav to drop below logo if cramped */
+  gap: 0.5rem;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* --- Home highlight cards: 3 across, wrapping --- */
+.highlight-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* flex: 1 1 260px = grow to fill, shrink if needed, but aim for ~260px wide.
+   When three no longer fit at 260px each, flex-wrap drops them to a new row. */
+.highlight-card {
+  flex: 1 1 260px;
+  margin-bottom: 0;   /* gap handles spacing now, so drop the M2 margin */
+}
+
+/* --- Attractions: 3 cards across, wrapping --- */
+.attraction-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.attraction-card {
+  flex: 1 1 280px;
+  margin-bottom: 0;
+}
+
+/* --- Food guide: image beside text in each entry --- */
+.food-list {
+  display: flex;
+  flex-direction: column;  /* stack the entries vertically... */
+  gap: 1.5rem;
+}
+
+.food-card {
+  display: flex;           /* ...but lay out each entry as a row */
+  align-items: stretch;
+  margin-bottom: 0;
+}
+
+.food-image {
+  flex: 0 0 40%;           /* fixed at ~40% width, don't grow or shrink */
+  height: 300px;           /* fixed row height so the image crops instead of
+                              forcing a tall row when the text is short */
+  object-fit: cover;
+}
+
+/* The text column takes the remaining space and gets its own padding now that
+   it sits beside the image instead of below it. */
+.food-body {
+  flex: 1;
+  padding: 1.25rem 1.5rem;
+}
+
+.food-name {
+  margin: 0 0 0.5rem;
+}
+
+/* --- Gallery: flexible grid of figures, ~3 per row --- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  flex: 1 1 280px;
+  margin-bottom: 0;
+}
