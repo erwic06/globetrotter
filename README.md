@@ -4,6 +4,10 @@ A personal, multi-page travel guide for Hawaii — built to share the attraction
 seafood, and scenery worth knowing about. Built as Project #1 of the Salesforce FTL
 program to practice semantic HTML, CSS, Flexbox, and responsive design.
 
+## Demo
+
+Watch the video walkthrough here: https://www.loom.com/share/43614ff2bafa4915996ed5bf133471e9
+
 ## Pages
 
 - **Home** (`index.html`) — hero banner, intro, and links into the guide.
