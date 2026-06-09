@@ -4,7 +4,7 @@
 - Destination chosen: Hawaii
 - Primary audience: Everyone
 - One design decision that reflects the destination: A blue/green palette with beach scenery, plus a seafood-forward food guide, to capture an authentic, local-leaning Hawaii feel.
-- Wireframe format used (hand-drawn / Figma / other): _TODO: add wireframe images to wireframes/_
+- Wireframe format used (hand-drawn / Figma / other): Figma (low-fidelity, exported to wireframes/)
 
 ## Milestone 1: HTML Structure
 - One HTML structure choice and why: Each repeating item (attractions, food entries, gallery photos) is an `<article>` or `<figure>` rather than a `<div>`. An `<article>` is the right tag for a self-contained piece of content that could stand on its own, and using it consistently is what lets a single CSS rule style every card identically later.
