@@ -50,7 +50,7 @@ Stretch:
 
 ## Notes
 
-- Images in `images/` are placeholders; replace the files (keeping the same names)
-  with real Hawaii photos and the markup needs no changes.
+- Photos live in `images/`, named descriptively (e.g. `hero-beach.jpg`). To swap
+  one, replace the file keeping the same name and the markup needs no changes.
 - `planning.md` and `decisions.md` were maintained throughout, with planning intent
   written *before* each milestone's code.
