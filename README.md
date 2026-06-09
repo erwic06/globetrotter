@@ -16,8 +16,8 @@ program to practice semantic HTML, CSS, Flexbox, and responsive design.
 ```
 index.html, attractions.html, food-guide.html, gallery.html
 css/styles.css      one shared stylesheet
-images/             descriptively-named photos (placeholders for now)
-wireframes/         page wireframes (add your sketches here)
+images/             Images displayed on the guide.
+wireframes/         page wireframes (added in wireframes/ folder.)
 planning.md         living spec: planning answers + design/layout/breakpoint intent
 decisions.md        decisions log, one section per milestone
 ```
