@@ -234,6 +234,17 @@ main {
   text-decoration: underline;
 }
 
+/* Pull the alternatives list in from the browser's default deep indent and give
+   the items a little breathing room. */
+.food-alternatives {
+  margin: 0 0 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.food-alternatives li {
+  margin-bottom: 0.25rem;
+}
+
 /* ------------------------------------------------------------------ *
  * 7. Gallery
  * Same card treatment for each figure; the grid layout is Flexbox in M3.
@@ -333,10 +344,21 @@ main {
   margin-bottom: 0;
 }
 
+/* The image sits in a .food-media wrapper that takes ~40% width and stretches to
+   the full card height (align-items: stretch on .food-card). The image is then
+   positioned to fill that wrapper and crops with object-fit, so it matches the
+   text height whether the text is short or long -- no leftover gap above or below. */
+.food-media {
+  flex: 0 0 40%;
+  position: relative;
+  min-height: 220px;       /* a sensible floor when a card's text is very short */
+}
+
 .food-image {
-  flex: 0 0 40%;           /* fixed at ~40% width, don't grow or shrink */
-  height: 300px;           /* fixed row height so the image crops instead of
-                              forcing a tall row when the text is short */
+  position: absolute;
+  inset: 0;                /* shorthand for top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -420,10 +442,13 @@ main {
     flex-direction: column;
   }
 
-  .food-image {
-    flex-basis: auto;   /* no longer a 40% column... */
-    width: 100%;        /* ...now full-width on top */
+  /* Stacked: the media wrapper becomes a full-width band on top with a fixed
+     height; the image still fills it. */
+  .food-media {
+    flex-basis: auto;
+    width: 100%;
     height: 200px;
+    min-height: 0;
   }
 
   /* Smaller side padding so content isn't cramped on a narrow screen. */
